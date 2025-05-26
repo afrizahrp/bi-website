@@ -49,7 +49,7 @@ const BillboardPage: React.FC<BillboardProps> = ({ data }) => {
 
   return (
     <div className='h-[calc(100vh-7px)] overflow-hidden'>
-      <div
+      {/* <div
         className='w-full h-full flex flex-col gap-16 xl:flex-row'
         key={data.id}
       >
@@ -64,20 +64,21 @@ const BillboardPage: React.FC<BillboardProps> = ({ data }) => {
               className={`w-full h-full object-cover ${isMobile ? 'mobile-video' : ''}`}
             />
           </div>
-        ) : (
-          <div className='w-full h-full relative'>
-            <Image
-              src={data.contentURL}
-              height={300}
-              width={300}
-              alt='Image'
-              className='object-cover'
-              style={{ width: '100%', height: '90%' }}
-              sizes='(max-width: 140px) 100vw, (max-width: 168px) 50vw, 33vw'
-            />
-          </div>
-        )}
+        ) : ( */}
+      <div className='w-full h-full relative'>
+        <Image
+          // src={data.contentURL}
+          src='/images/book-online.png'
+          height={200}
+          width={200}
+          alt='Image'
+          className='object-cover'
+          style={{ width: '100%', height: '90%' }}
+          sizes='(max-width: 140px) 100vw, (max-width: 168px) 50vw, 33vw'
+        />
       </div>
+      {/* )} */}
+      {/* </div> */}
     </div>
   );
 };
